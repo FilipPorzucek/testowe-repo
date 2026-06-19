@@ -1,0 +1,14 @@
+name: Testowanie triggerow
+
+on:
+  push:
+    branches: [ main, 'feature/**' ]
+    paths-ignore: [ 'docs/**' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Workflow uruchomil sie poprawnie!"
